@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sistem Tiket Terpadu</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Login Section -->
+  <section id="loginSection">
+    <div class="logo-container">
+      <img src="sekolah.png" alt="Logo Sekolah" class="logo" />
+      <img src="logo.png" alt="Logo Gue" class="logo" />
+    </div>
+    <h2>Login Sistem Tiket</h2>
+
+    <div class="form-group">
+      <label for="loginEmail">Email</label>
+      <input type="email" id="loginEmail" placeholder="Email" />
+    </div>
+
+    <div class="form-group">
+      <label for="loginPassword">Password</label>
+      <input type="password" id="loginPassword" placeholder="Password" />
+    </div>
+
+    <button id="btnLogin">Login</button>
+
+    <p>Belum punya akun? <a href="#" id="showRegister">Daftar di sini</a></p>
+    <p id="loginError" class="error"></p>
+  </section>
+
+  <!-- Register Section -->
+  <section id="registerSection" class="hidden">
+    <h2>Daftar Akun Baru</h2>
+    <label>Email</label>
+    <input type="email" id="registerEmail" placeholder="email@domain.com" />
+    <label>Password</label>
+    <input type="password" id="registerPassword" />
+    <label>Konfirmasi Password</label>
+    <input type="password" id="registerConfirmPassword" />
+    <button id="btnRegister">Daftar</button>
+    <p>Sudah punya akun? <a href="#" id="showLogin">Login di sini</a></p>
+    <p id="registerError" class="error"></p>
+    <p id="registerSuccess" class="success"></p>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="bookingSection" class="hidden">
+    <div class="logo-container">
+      <img src="sekolah.png" alt="Logo Sekolah" class="logo" />
+      <img src="logo.png" alt="Logo Gue" class="logo" />
+    </div>
+    <h2>Pesan Tiket Transportasi Umum</h2>
+<label>Rute</label>
+<select id="routeSelect">
+  <option value="">-- Pilih Rute --</option>
+  <option value="Jakarta-Bandung">Jakarta - Bandung</option>
+  <option value="Bandung-Jakarta">Bandung - Jakarta</option>
+  <option value="Jakarta-Surabaya">Jakarta - Surabaya</option>
+  <option value="Bandung-Surabaya">Bandung - Surabaya</option>
+  <option value="Bandung-Semarang">Bandung - Semarang</option>
+  <option value="Jakarta-Yogyakarta">Jakarta - Yogyakarta</option>
+  <option value="Yogyakarta-Jakarta">Yogyakarta - Jakarta</option>
+  <option value="Jakarta-Malang">Jakarta - Malang</option>
+  <option value="Malang-Jakarta">Malang - Jakarta</option>
+  <option value="Surabaya-Yogyakarta">Surabaya - Yogyakarta</option>
+  <option value="Yogyakarta-Surabaya">Yogyakarta - Surabaya</option>
+  <option value="Jakarta-Semarang">Jakarta - Semarang</option>
+  <option value="Semarang-Jakarta">Semarang - Jakarta</option>
+  <option value="Surabaya-Malang">Surabaya - Malang</option>
+  <option value="Malang-Surabaya">Malang - Surabaya</option>
+  <option value="Bandung-Yogyakarta">Bandung - Yogyakarta</option>
+  <option value="Yogyakarta-Bandung">Yogyakarta - Bandung</option>
+</select>
+
+    <label>Jumlah Penumpang</label>
+    <input type="number" id="jumlahPenumpang" min="1" value="1" />
+
+    <button id="btnBuy">Pesan Tiket</button>
+
+    <div id="ticketInfo" class="hidden">
+      <h3>Detail Tiket</h3>
+      <textarea id="ticketDetails" rows="6" readonly></textarea>
+    </div>
+
+    <button id="btnLogout" class="logout-btn">Logout</button>
+
+    <button id="btnShowSetting" style="margin-top: 20px;">Setting</button>
+  </section>
+
+<!-- Setting Section -->
+<section id="settingSection" class="hidden">
+  <div class="logo-container">
+    <img src="sekolah.png" alt="Logo Sekolah" class="logo" />
+    <img src="logo.png" alt="Logo Gue" class="logo" />
+  </div>
+  <h2>Setting Akun</h2>
+  <label>Kata Sandi Lama</label>
+  <input type="password" id="currentPassword" />
+  <label>Kata Sandi Baru</label>
+  <input type="password" id="newPassword" />
+  <label>Konfirmasi Kata Sandi Baru</label>
+  <input type="password" id="confirmNewPassword" />
+  <button id="btnChangePassword">Ganti Kata Sandi</button>
+  <p id="settingError"></p>
+  <button id="btnBackToBooking" style="margin-top: 15px;">Kembali ke Pesan Tiket</button>
+</section>
+
+</div>
+
+  <footer>
+    <p>Copyright © 2025</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
