@@ -153,13 +153,13 @@ btnRegister.addEventListener("click", () => {
     return;
   }
 
-  fetch("https://script.google.com/macros/s/AKfycbxyhU0QKof0y88qwg3wYYkoQEqEvEp1Fwly91osG95L3_MmWLc2k_hRoS-GCnxWA7tAUA/exec", {
-    method: "POST",
-    body: JSON.stringify({ email, password: pass }),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
+fetch("https://script.google.com/macros/s/AKfycbxyhU0QKof0y88qwg3wYYkoQEqEvEp1Fwly91osG95L3_MmWLc2k_hRoS-GCnxWA7tAUA/exec", {
+  method: "POST",
+  body: JSON.stringify({ email, password: pass }),
+  headers: {
+    "Content-Type": "application/json"
+  }
+})
     .then(res => res.text())
     .then(msg => {
       registerSuccess.textContent = "Registrasi berhasil!";
